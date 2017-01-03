@@ -7,11 +7,11 @@ class BoatsController < ApplicationController
   end
 
   def create
-    @boat = Boat.new(boat_params)
+    @boat = current_user.boats.new(boat_params)
     if @boat.save
       redirect_to root_path
     else
-      redirect_to new_boat_path  
+      render "new" 
     end
   end
 
@@ -25,7 +25,14 @@ class BoatsController < ApplicationController
   end
 
   def destroy
+    @boat = Boat.find(params[:id])
+    respond_to do |format|
+      if @boat.destroy
+        format.js
+      end
+    end
   end
+
     private 
   def boat_params
     params.require(:boat).permit(:name, :containers, :location)

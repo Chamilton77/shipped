@@ -1,0 +1,37 @@
+<%= form_for @job do |f| %>
+	<div class="control-group">
+		<%= f.label :description, class: "control-label" %>
+		<div class="controls">
+			<%= f.text_field :description %>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<%= f.label :Origin, class: "control-label" %>
+		<div class="controls">
+			<%= f.select :origin, ["Tokyo", "Los Angles", "Hong Kong", "Sydney", "Portland", "New York"] %>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<%= f.label :Destination, class: "control-label" %>
+		<div class="controls">
+			<%= f.select :destination, ["Tokyo", "Los Angles", "Hong Kong", "Sydney", "Portland", "New York"] %>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<%= f.label :Cost, class: "control-label" %>
+		<div class="controls">
+			<%= f.text_field :cost %>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<%= f.label :Containers, class: "control-label" %>
+		<div class="controls">
+			<%= f.text_field :containers %>
+		</div>
+	</div>
+	<%= f.submit "Submit", :disable_with => 'Submiting...' %>
+<% end %>
