@@ -1,0 +1,17 @@
+<% @boats.each do |boat| %>
+	<div class="boat">
+		<%= form_tag( '/boatjobs', :method => "post", remote: true) do %>
+			<%= hidden_field_tag "job_id", "", class: "jobid" %>
+			<%= hidden_field_tag "boat_id", boat.id %>
+			Boat Name: <%= boat.name %>
+			<br>
+			Number of containers: <%= boat.containers%>
+			<br>
+			Location: <%= boat.location%>
+			<br>
+			<%= submit_tag ("Add Boat To Job"), :class => "addboat" %>
+			<br>
+		</div>
+		<br>
+	<% end %>
+<% end %>

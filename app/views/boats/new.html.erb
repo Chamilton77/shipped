@@ -1,13 +1,13 @@
 <h1>Boats#new</h1>
 <p>Find me in app/views/boats/new.html.erb</p>
 
-<%= form_for @boat do |f| %>
+<%= form_for @boat, remote: true do |f| %>
 	<%= f.label :name, "Boat Name" %>
 	<%= f.text_field :name %>
 	<%= f.label :containters, "Number of Containters" %>
 	<%= f.text_field :containers %>
 	<%= f.label :location, "Location" %>
-	<%= f.text_field :location %>
+	<%= f.select :location, ["Tokyo", "Los Angles", "Hong Kong", "Sydney", "Portland", "New York"] %>
 	<%= f.submit "Submit" %>
 <% end %>
-  
+

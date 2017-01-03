@@ -9,7 +9,9 @@ Rails.application.routes.draw do
         registrations: 'users/registrations'
       }
 
-   resources :boats   
+   resources :boats  
+   resources :jobs 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  post '/boatjobs' => 'boatjobs#create'
   root to: "home#index"
 end

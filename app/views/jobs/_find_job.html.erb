@@ -1,0 +1,9 @@
+<div>
+	<% @jobs.each do |job| %>
+		<%= job.description %>
+		<%= job.origin %>
+		<%= job.destination %>
+		<%= job.cost %>
+		<%= job.containers %>
+	<% end %>
+</div>

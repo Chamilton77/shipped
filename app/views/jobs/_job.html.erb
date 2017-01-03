@@ -1,0 +1,23 @@
+<div class="job">
+	<br>
+	Description: <%= job.description %>
+	<br>
+	Origin: <%= job.origin %>
+	<br>
+	Destination: <%= job.destination %>
+	<br>
+	Cost: <%= job.cost %>
+	<br>
+	Containers: <%= job.containers %>
+	<br>
+	<%= link_to "End Job", job_path(job), method: :delete, remote: true, class: 'destroy-job' %>
+	<br>
+	Boats on job:
+	<% job.boats.each do |boat| %>
+		<%= boat.name %>
+	<% end %>
+	<br>
+	<%= hidden_field_tag "job_id", job.id, id: "jobidholder" %>
+	<button class="fboat">Find A Boat</button>
+	<br>
+</div>
