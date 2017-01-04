@@ -9,4 +9,6 @@ $(document).on 'turbolinks:load', ->
 	.on "ajax:error", (e) ->
 		console.log(e)
 
-		
+	$(document).on 'turbolinks:load', -> 
+	$('#jobsboats').on 'click', ->
+		$('.modal').modal()	

@@ -4,7 +4,7 @@
 
 $(document).on 'turbolinks:load', -> 
 	$('#mbut').on 'click', ->
-		$('.modal').modal()
+		$('#jobmodal').modal()
 
 	$('.fboat').on 'click', ->
 		$button = $(this)
@@ -13,7 +13,7 @@ $(document).on 'turbolinks:load', ->
 			$(this).val($button.prev("input").val())
 		$('#boatmodal').modal()
 
-	$('.destroy-job').on 'ajax:success', (e) ->
+	$('.destroy_job').on 'ajax:success', (e) ->
 		$(this).closest('.job').remove()
 	.on "ajax:error", (e) ->
 		console.log(e)

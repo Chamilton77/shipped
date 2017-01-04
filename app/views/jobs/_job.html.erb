@@ -10,7 +10,7 @@
 	<br>
 	Containers: <%= job.containers %>
 	<br>
-	<%= link_to "End Job", job_path(job), method: :delete, remote: true, class: 'destroy-job' %>
+	<%= link_to "End Job", job_path(job), method: :delete, remote: true, class: 'destroy_job' %>
 	<br>
 	Boats on job:
 	<% job.boats.each do |boat| %>
