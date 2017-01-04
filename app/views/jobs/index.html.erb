@@ -3,7 +3,7 @@
 <!-- Large modal --> 
 <button type="button" id="mbut" class="btn btn-primary" data-target=".bs-example-modal-lg">New Job</button>
 
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+<div class="modal fade bs-example-modal-lg" id="jobmodal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
 		<%= render "new_job" %>
@@ -26,7 +26,7 @@
 	<br>
 </div>
 
-<div class="modal  fade bs-example-modal-lg" id="boatmodal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+<div class="modal fade bs-example-modal-lg" id="boatmodal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
 		<%= render "all_boats" %>

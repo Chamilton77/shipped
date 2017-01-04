@@ -9,13 +9,20 @@
 <br>
 <% @boats.each do |boat| %>
 	<div class="boat">
+		<%= image_tag boat.avatar.url(:medium) %>
+		<br>
 		Boat Name: <%= boat.name %>
 		<br>
 		Number of containers: <%= boat.containers%>
 		<br>
 		Location: <%= boat.location%>
 		<br>
-		<button id="jobsboats">New Jobs</button>
+		Jobs this boat has: 
+			<% boat.jobs.each do |job| %>
+				<%= job.description %>
+			<% end %>
+			<br>
+		<%= link_to "Add Job", new_job_path(boat_id: boat.id) %>
 		<br>
 		<%= link_to "Retire Boat", boat_path(boat), method: :delete, remote: true, class: 'destroy-boat' %>
 	</div>

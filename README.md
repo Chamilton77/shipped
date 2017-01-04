@@ -1,24 +1,6 @@
-# README
+To get this to work on your computer you will need to run bundle install on the app to get 
+the gems that I used.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Next you will have to run rails db:migrate to make sure all the migrations are done.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+For this you will also need the newest version of Ruby.
