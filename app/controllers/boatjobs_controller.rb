@@ -11,3 +11,4 @@ class BoatjobsController < ApplicationController
 		end
 	end
 end
+ 
