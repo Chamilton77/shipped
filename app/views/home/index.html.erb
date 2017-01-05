@@ -19,7 +19,7 @@
 		<br>
 		Jobs this boat has: 
 			<% boat.jobs.each do |job| %>
-				<%= job.description %>
+				<%= job.name %>
 			<% end %>
 			<br>
 		<%= link_to "Add Job", new_job_path(boat_id: boat.id) %>
